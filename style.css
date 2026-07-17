@@ -10,7 +10,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("");
+    background-image: url("img/foto-casal.jpg");
     background-size: cover;
     background-position: center;
     /* ADICIONE ESTAS 4 LINHAS ABAIXO: */
