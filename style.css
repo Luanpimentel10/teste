@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/foto-casal.jpg");
+    background-size: cover;
+    background-position: center 45%;
+    /* ADICIONE ESTAS 4 LINHAS ABAIXO: */
+    position: fixed; /* Fixa o header no topo para ele poder deslizar por cima do conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Garante que ele fique na frente de tudo até ser clicado */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Diz que qualquer movimento dele vai durar 1 segundo de forma suave */
+}
+  
+
+h1 {
+    font-size: 50px;
+    font-family: "Great Vibes", cursive;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+    /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
+    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
+    opacity: 0;
+}
+
+.data {
+    font-size: 20px;
+    color: white;
+    /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
+    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
+    opacity: 0;
+}
+
+.horario {
+    font-size: 22px;
+        color: white;
+        /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
+    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
+    opacity: 0;
+
+}
+
+.botao {
+    margin-top: 15px;
+    padding: 16px 38px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+    /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
+    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
+    opacity: 0;
+}
+
+.botao:hover {
+    background-color: #c59b25;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 
+Explicação do que esse código faz:
+
+@keyframes funciona como um "roteiro" para o navegador. Ele diz o que acontece no início e no fim da animação.
+from (Início): O elemento começa invisível (opacity: 0) e empurrado 30 pixels para baixo (translateY(30px)).
+to (Fim): O elemento fica totalmente visível (opacity: 1) e volta para a sua posição original (translateY(0)).
+Criando animação chamada 'surgirDeBaixo' */
+@keyframes surgirDeBaixo {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Essa classe será colocada pelo JavaScript na hora do clique */
+.capa-sumir {
+    transform: translateY(-100vh); /* Empurra a capa inteira para cima, para fora da tela */
+    opacity: 0; /* Faz ela desaparecer suavemente enquanto sobe */
+}
