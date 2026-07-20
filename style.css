@@ -10,9 +10,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("img/foto-casal.jpg");
+    background-image: url("img/foto-casal2.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center 35%;
     /* ADICIONE ESTAS 4 LINHAS ABAIXO: */
     position: fixed; /* Fixa o header no topo para ele poder deslizar por cima do conteúdo */
     top: 0;
@@ -24,7 +24,7 @@ header {
   
 
 h1 {
-    font-size: 50px;
+    font-size: clamp(2.8rem, 8vw, 4rem);   
     font-family: "Great Vibes", cursive;
     color: #fff;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
@@ -35,7 +35,7 @@ h1 {
 }
 
 .data {
-    font-size: 20px;
+    font-size: clamp(1rem, 3vw, 1.3rem);
     color: white;
     /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
     animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
@@ -43,8 +43,8 @@ h1 {
 }
 
 .horario {
-    font-size: 22px;
-        color: white;
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+    color: white;
         /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
     animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
     opacity: 0;
@@ -53,12 +53,12 @@ h1 {
 
 .botao {
     margin-top: 15px;
-    padding: 16px 38px;
+    padding: 0.9rem 2rem;
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.15);
     color: #fff;
-    font-size: 16px;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
