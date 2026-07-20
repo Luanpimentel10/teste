@@ -5,6 +5,7 @@
 }
 
 header {
+    height: 100dvh;
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -12,19 +13,20 @@ header {
     align-items: center;
     background-image: url("img/foto-casal2.jpg");
     background-size: cover;
-    background-position: center 35%;
+    background-position: center 55%;
     /* ADICIONE ESTAS 4 LINHAS ABAIXO: */
     position: fixed; /* Fixa o header no topo para ele poder deslizar por cima do conteúdo */
     top: 0;
     left: 0;
     width: 100%;
+
     z-index: 10; /* Garante que ele fique na frente de tudo até ser clicado */
     transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Diz que qualquer movimento dele vai durar 1 segundo de forma suave */
 }
   
 
 h1 {
-    font-size: clamp(2.8rem, 8vw, 4rem);   
+    font-size: clamp(2.5rem, 10vw, 4rem);  
     font-family: "Great Vibes", cursive;
     color: #fff;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
@@ -77,12 +79,10 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-
+    gap: 12px;
+    padding: 15px;
     width: 100%;
     max-width: 500px;
-    padding: 20px;
-
     text-align: center;
 }
 
