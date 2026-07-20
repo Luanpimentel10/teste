@@ -63,7 +63,7 @@ h1 {
     cursor: pointer;
     transition: 0.3s ease;
     letter-spacing: 1px;
-    /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
+    /* ADICIONE ESSAS DUAS LINHAS ABAIXO, capa */
     animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
     opacity: 0;
 }
@@ -77,7 +77,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-top: -800px;
 }
 
 /* 
