@@ -13,7 +13,7 @@ header {
     align-items: center;
     background-image: url("img/foto-casal2.jpg");
     background-size: cover;
-    background-position: center 90%;
+    background-position: center 130%;
     /* ADICIONE ESTAS 4 LINHAS ABAIXO: */
     position: fixed; /* Fixa o header no topo para ele poder deslizar por cima do conteúdo */
     top: 0;
