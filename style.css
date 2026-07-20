@@ -5,7 +5,7 @@
 }
 
 header {
-    height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,8 +75,15 @@ h1 {
 .hero {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 15px;
+
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+
+    text-align: center;
 }
 
 /* 
