@@ -4,109 +4,177 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
 header {
-   header {
+    height: 100dvh;
     min-height: 100dvh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("img/foto-casal2.jpggit");
-    background-size: auto 60%;
-    background-position: center top;
+
+    background-image: url("img/foto-casal2.jpg");
+    background-size: cover;
+    background-position: center 35%;
     background-repeat: no-repeat;
+
+    width: 100vw;
+    overflow: hidden;
 
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+
     z-index: 10;
+
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
-}
-  
 
-h1 {
-    font-size: clamp(2.5rem, 10vw, 4rem);  
-    font-family: "Great Vibes", cursive;
-    color: #fff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-    letter-spacing: 1px;
-    /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
-    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
-    opacity: 0;
-}
-
-.data {
-    font-size: clamp(1rem, 3vw, 1.3rem);
-    color: white;
-    /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
-    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
-    opacity: 0;
-}
-
-.horario {
-    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
-    color: white;
-        /* ADICIONE ESSAS DUAS LINHAS ABAIXO */
-    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
-    opacity: 0;
-
-}
-
-.botao {
-    margin-top: 15px;
-    padding: 0.9rem 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s ease;
-    letter-spacing: 1px;
-    /* ADICIONE ESSAS DUAS LINHAS ABAIXO, capa */
-    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
-    opacity: 0;
-}
-
-.botao:hover {
-    background-color: #c59b25;
-}
 
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     gap: 12px;
-    padding: 15px;
+
     width: 100%;
     max-width: 500px;
+
+    padding: 15px;
+
     text-align: center;
 }
 
-/* 
-Explicação do que esse código faz:
 
-@keyframes funciona como um "roteiro" para o navegador. Ele diz o que acontece no início e no fim da animação.
-from (Início): O elemento começa invisível (opacity: 0) e empurrado 30 pixels para baixo (translateY(30px)).
-to (Fim): O elemento fica totalmente visível (opacity: 1) e volta para a sua posição original (translateY(0)).
-Criando animação chamada 'surgirDeBaixo' */
-@keyframes surgirDeBaixo {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* NOME DO CASAL */
+
+h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+
+    font-family: "Great Vibes", cursive;
+
+    color: #fff;
+
+    text-shadow: 
+    2px 2px 8px rgba(0,0,0,0.5);
+
+    letter-spacing: 1px;
+
+    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
+
+    opacity: 0;
 }
 
-/* Essa classe será colocada pelo JavaScript na hora do clique */
+
+/* DATA */
+
+.data {
+
+    font-size: clamp(1rem, 3vw, 1.3rem);
+
+    color: white;
+
+    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
+
+    opacity: 0;
+}
+
+
+/* HORÁRIO */
+
+.horario {
+
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+
+    color: white;
+
+    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
+
+    opacity: 0;
+}
+
+
+
+/* BOTÃO */
+
+.botao {
+
+    margin-top: 15px;
+
+    padding: 0.9rem 2rem;
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.15);
+
+    color: white;
+
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    letter-spacing: 1px;
+
+
+    animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
+
+    opacity: 0;
+}
+
+
+.botao:hover {
+
+    background-color: #c59b25;
+
+}
+
+
+
+/* ANIMAÇÃO */
+
+@keyframes surgirDeBaixo {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* SUMIR A CAPA AO CLICAR */
+
 .capa-sumir {
-    transform: translateY(-100vh); /* Empurra a capa inteira para cima, para fora da tela */
-    opacity: 0; /* Faz ela desaparecer suavemente enquanto sobe */
+
+    transform: translateY(-100vh);
+
+    opacity: 0;
+
 }
