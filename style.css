@@ -5,23 +5,24 @@
 }
 
 header {
-    height: 100dvh;
+   header {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("img/foto-casal2.jpg");
-    background-size: 120% auto;
+    background-image: url("img/foto-casal2.jpggit");
+    background-size: auto 120%;
     background-position: center top;
-    /* ADICIONE ESTAS 4 LINHAS ABAIXO: */
-    position: fixed; /* Fixa o header no topo para ele poder deslizar por cima do conteúdo */
+    background-repeat: no-repeat;
+
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
-    z-index: 10; /* Garante que ele fique na frente de tudo até ser clicado */
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Diz que qualquer movimento dele vai durar 1 segundo de forma suave */
+    z-index: 10;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
 }
   
 
