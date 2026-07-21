@@ -18,10 +18,13 @@ header {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+    justify-content: flex-start;
     align-items: center;
 
-    background-image: url("img/foto-casal3.jpg");
+    padding-top: 15px;
+
+    background-image: url("img/foto-casal2.jpg");
     background-size: cover;
     background-position: center 35%;
     background-repeat: no-repeat;
@@ -43,7 +46,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    gap: 12px;
+    gap: 2px;
 
     width: 100%;
     max-width: 500px;
