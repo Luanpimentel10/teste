@@ -19,7 +19,7 @@ header {
     display: flex;
     flex-direction: column;
 
-    justify-content: flex-start;
+    justify-content: flex-start; /* ou "center", para centralizar e tirar o "pedding top" para poder centralizar"*/
     align-items: center;
 
     padding-top: 15px;
@@ -46,7 +46,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    gap: 2px;
+    gap: 12px;
 
     width: 100%;
     max-width: 500px;
@@ -109,37 +109,51 @@ h1 {
 }
 
 
-
 /* BOTÃO */
 
 .botao {
 
-    margin-top: 15px;
-
+    margin-top: 1px;
     padding: 0.9rem 2rem;
-
     border: 1px solid rgba(255,255,255,0.8);
-
     border-radius: 50px;
-
-    background: rgba(255,255,255,0.15);
-
+    background: rgba(255,255,255,0.20);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     color: white;
-
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-
     font-weight: 500;
-
     cursor: pointer;
-
     transition: 0.3s ease;
-
     letter-spacing: 1px;
-
-
     animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
-
     opacity: 0;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+.botao::first-letter {
+    font-size: 1.2em;
+}
+
+.linha-coracao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: -20px 0 2px;
+}
+
+.linha-coracao span {
+    width: 60px;
+    height: 1px;
+    background: white;
+}
+
+.linha-coracao i {
+    font-size: 22px;
+    color: white;
+    font-style: normal;
 }
 
 
