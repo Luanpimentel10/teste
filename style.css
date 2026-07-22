@@ -19,12 +19,10 @@ header {
     display: flex;
     flex-direction: column;
 
-    justify-content: flex-start; /* ou "center", para centralizar e tirar o "pedding top" para poder centralizar"*/
+    justify-content: center; /* ou flex start ou "center", para centralizar e tirar o "pedding top" para poder centralizar"*/
     align-items: center;
 
-    padding-top: 15px;
-
-    background-image: url("img/foto-casal2.jpg");
+    background-image: url("img/foto-casal4.jpg");
     background-size: cover;
     background-position: center 35%;
     background-repeat: no-repeat;
@@ -127,7 +125,6 @@ h1 {
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
-    letter-spacing: 1px;
     animation: surgirDeBaixo 1.2s ease-out 0.8s forwards;
     opacity: 0;
     letter-spacing: 1.5px;
